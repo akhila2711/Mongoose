@@ -19,7 +19,7 @@ const user = new User({
 // });
 
 async function run(){
-    const newUser = user.save()
+    const newUser =await user.save()
     console.log(newUser)
 }
 run()
