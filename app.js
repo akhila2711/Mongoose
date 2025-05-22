@@ -12,9 +12,15 @@ const user = new User({
     name: "Akhi",
     age: 25
 });
-user.save().then(() => {
-    console.log("User saved successfully");
-}).catch((error) => {
-    console.error("Error saving user:", error);
-});
+// user.save().then(() => {
+//     console.log("User saved successfully");
+// }).catch((error) => {
+//     console.error("Error saving user:", error);
+// });
+
+async function run(){
+    const newUser = user.save()
+    console.log(newUser)
+}
+run()
 //schema
