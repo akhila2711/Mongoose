@@ -8,10 +8,6 @@ mongoose.connect("mongodb://127.0.0.1:27017").then(() => {
 
 })
 
-const user = new User({
-    name: "Akhi",
-    age: 25
-});
 // user.save().then(() => {
 //     console.log("User saved successfully");
 // }).catch((error) => {
@@ -19,7 +15,11 @@ const user = new User({
 // });
 
 async function run(){
-    const newUser =await user.save()
+    const newUser =await User.create({
+        name: "Akhi",
+        age: 25,
+        email: "akhi@gmail.com",
+    })
     console.log("newUser",newUser)
 }
 run()
