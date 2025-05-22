@@ -20,7 +20,7 @@ const user = new User({
 
 async function run(){
     const newUser =await user.save()
-    console.log(newUser)
+    console.log("newUser",newUser)
 }
 run()
 //schema
