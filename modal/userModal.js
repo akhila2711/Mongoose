@@ -4,4 +4,4 @@ const userSchema = new mangoose.Schema({
     name: String,age:Number
 })
 const userModel = mangoose.model('person', userSchema)
-modules.exports = userModel
+module.exports = userModel
